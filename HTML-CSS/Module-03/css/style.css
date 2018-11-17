@@ -1,6 +1,9 @@
 body {
+  width: 900px;
   font-size: 0;
   background-color: white;
+  margin: auto;
+  padding: 0;
 }
 .wrapper {
   width: 900px;
@@ -31,21 +34,26 @@ header {
   color: rgb(141, 140, 140);
 }
 .menu-link:hover {
-  color:rgb(39, 86, 240);
+  color: rgb(39, 86, 240);
 }
-main li:nth-child(even) {
-  margin-right: 0;
-}
-main{
-  padding: 0;
+.list {
   margin: auto;
+  padding: 0;
+  display: block;
 }
-main li{
+.main-list {
   width: 420px;
   display: inline-block;
+  margin-right: 60px;
   font-size: 20px;
+  margin-bottom: 20px;
 }
-.visually-hidden{
+.main-list:nth-child(even) {
+  margin-right: 0px;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -57,18 +65,25 @@ main li{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.image {
+  width: 420px;
+  margin-bottom: 20px;
+}
 .subtitle {
+  margin: 0;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 20px;
   color: rgb(141, 136, 136);
 }
 h3 {
+  margin: 0;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(139, 135, 135);
 }
 p {
+  margin: auto;
   font-size: 20px;
   line-height: 2em;
   color: rgb(141, 136, 136);
@@ -82,12 +97,12 @@ p {
   background-color: white;
   text-align: center;
   line-height: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .button a {
-  color: rgb(133, 125, 125);
+  color: rgb(100, 95, 95);
   text-decoration: none;
 }
 .button:hover {
-  color: red;
   box-shadow: 0px 0px 0px 0px;
 }
