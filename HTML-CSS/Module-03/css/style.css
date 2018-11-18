@@ -1,6 +1,5 @@
 body {
   width: 900px;
-  font-size: 0;
   background-color: white;
   margin: auto;
   padding: 0;
@@ -37,19 +36,24 @@ header {
   color: rgb(39, 86, 240);
 }
 .list {
-  margin: auto;
+  font-size: 0;
+  margin:auto;
   padding: 0;
   display: block;
+  margin-bottom: 60px;
 }
 .main-list {
   width: 420px;
   display: inline-block;
   margin-right: 60px;
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 .main-list:nth-child(even) {
   margin-right: 0px;
+}
+.main-list:nth-child(n+5){
+  margin-bottom: 0;
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -74,19 +78,19 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 20px;
-  color: rgb(141, 136, 136);
+  color: #b4ad9e;
 }
-h3 {
+.title-text {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 25px;
-  color: rgb(139, 135, 135);
+  font-size: 30px;
+  color: #626262;
 }
-p {
+.text {
   margin: auto;
-  font-size: 20px;
-  line-height: 2em;
-  color: rgb(141, 136, 136);
+  font-size: 14px;
+  line-height: 1em;
+  color: #626262;
 }
 .button {
   display: block;
