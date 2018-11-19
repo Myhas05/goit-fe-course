@@ -1,0 +1,9 @@
+.logo{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    color: #555252;
+}
+.logo::first-letter{
+    color: #1abc9c;
+}
