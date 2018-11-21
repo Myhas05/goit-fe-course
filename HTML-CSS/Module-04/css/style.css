@@ -1,3 +1,17 @@
+
+html{
+    box-sizing:border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+.wrapper{
+    width: 1170px;
+    margin: auto;
+
+}
 .logo{
     text-transform: uppercase;
     text-decoration: none;
@@ -6,4 +20,38 @@
 }
 .logo::first-letter{
     color: #1abc9c;
+}
+.menu{
+    display: block;
+    font-size: 0;
+}
+.menu-item{
+    display: inline-block;
+    text-decoration: none;
+}
+.menu-link{
+    font-size: 14px;
+    text-transform: uppercase
+}
+.page-products{
+
+}
+.title{
+    font-size: 48px;
+    text-transform: uppercase
+}
+.products{
+    display: block;
+}
+.image-products{
+display: inline-block;
+text-decoration: none;
+}
+.news{
+    display: block;
+}
+.news-text{
+    display: inline-block;
+    text-decoration: none;
+    width: 350px;
 }
