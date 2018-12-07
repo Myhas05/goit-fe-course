@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -17,17 +18,23 @@ html {
 .wrapper {
   width: 1140px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .page-header {
-  padding: 40px;
+  padding: 40px 0;
 }
 .logo {
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 30px;
   float: left;
   margin: 0;
   padding: 0;
+  color: black;
+}
+.logo:hover {
+  color: #1abc9c;
 }
 .logo::first-letter {
   color: #1abc9c;
@@ -42,6 +49,9 @@ html {
 .menu-item {
   float: left;
   margin-left: 30px;
+}
+.menu-item:first-child {
+  margin-left: 0;
 }
 .menu-link {
   font-family: "Open Sans", sans-serif;
@@ -73,11 +83,11 @@ html {
   margin-top: 32px;
 }
 .products {
-  padding: 15px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .image-products {
-  display: inline-block;
   float: left;
   width: 255px;
   text-decoration: none;
@@ -91,44 +101,45 @@ html {
 .image-products:nth-of-type(n + 5) {
   margin-bottom: 0;
 }
-.image-products:hover .products-title {
-  background-image: linear-gradient(
-    to right,
-    #1abc9c,
-    #1abc9c 80%,
-    #7fd9c7 80%,
-    #7fd9c7
-  );
+.image{
+  margin-bottom: 20px;
+}
+.name-products:hover {
+  background-color: #1abc9c;
+  cursor: pointer;
+}
+.price-products:hover {
+  background-color: #7fd9c7;
   cursor: pointer;
 }
 .products-title {
-  background-image: linear-gradient(
-    to right,
-    #323232,
-    #323232 80%,
-    #8c8c8c 80%,
-    #8c8c8c
-  );
-  width: 255px;
   font-family: "Roboto Black", sans-serif;
   font-size: 18px;
-  line-height: 40px;
+  line-height: 45px;
   color: white;
+  text-align: center;
 }
 .name-products {
   text-transform: uppercase;
-  padding: 0 15px;
+  background-color: #323232;
   float: left;
+  width: 200px;
+  margin: 0px;
 }
 .price-products {
   text-transform: uppercase;
-  padding: 0 15px;
   float: right;
+  background-color: #8c8c8c;
+  margin: 0px;
+  width: 55px;
+}
+.news-page {
+  padding-bottom: 30px;
 }
 .news {
-  display: block;
   list-style-type: none;
-  padding: 15px;
+  margin: 0;
+  padding: 0;
 }
 .news-text {
   text-decoration: none;
@@ -142,11 +153,11 @@ html {
 .news-text:nth-child(3n) {
   margin-right: 0;
 }
-.news-title{
+.news-title {
   font-family: "Open Sans Semibold", sans-serif;
   font-size: 18px;
   line-height: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 .news-title::after {
   content: "";
