@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html {
   box-sizing: border-box;
@@ -73,6 +71,8 @@ html {
   color: #555252;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
 }
 .title::after {
   content: "";
@@ -97,9 +97,6 @@ html {
 }
 .image-products:nth-of-type(4n) {
   margin-right: 0;
-}
-.image-products:nth-of-type(n + 5) {
-  margin-bottom: 0;
 }
 .image{
   margin-bottom: 20px;
@@ -145,10 +142,10 @@ html {
   text-decoration: none;
   width: 350px;
   float: left;
-  margin-right: 30px;
   font-size: 14px;
   line-height: 28px;
-  margin-bottom: 10px;
+  margin: 0;
+  margin-right: 30px;
 }
 .news-text:nth-child(3n) {
   margin-right: 0;
@@ -157,6 +154,7 @@ html {
   font-family: "Open Sans Semibold", sans-serif;
   font-size: 18px;
   line-height: 25px;
+  margin: 0;
   margin-bottom: 45px;
 }
 .news-title::after {
@@ -177,9 +175,7 @@ html {
   border-radius: 5px;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
-  display: block;
-  box-sizing: border-box;
-  float: left;
+  display: inline-block;
 }
 .button:hover {
   background: #7fd9c7;
