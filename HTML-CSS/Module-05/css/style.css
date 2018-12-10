@@ -21,15 +21,20 @@ img{
   margin: 0 auto;
 }
 .page-header {
-  padding: 40px;
+  padding: 40px 0;
 }
 .logo {
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 30px;
   float: left;
   margin: 0;
   padding: 0;
+  color: black;
+}
+.logo:hover {
+  color: #1abc9c;
 }
 .logo::first-letter {
   color: #1abc9c;
@@ -44,6 +49,9 @@ img{
 .menu-item {
   float: left;
   margin-left: 30px;
+}
+.menu-item:first-child {
+  margin-left: 0;
 }
 .menu-link {
   font-family: "Open Sans", sans-serif;
@@ -61,6 +69,7 @@ img{
 .slider {
   width: 1600px;
   height: 600px;
+  margin: 0;
   position: relative;
   margin: auto;
 }
@@ -70,13 +79,13 @@ img{
   transform: translateY(-50%);
   display: inline-block;
   width: 105px;
-  height: 105px;
+  line-height: 105px;
   background-color: rgb(26, 188, 156);
   font-size: 75px;
   color: white;
   text-align: center;
-  vertical-align: middle;
   z-index: 1;
+  padding: 0;
 }
 .slider-button-prev {
   left: 245px;
@@ -100,6 +109,7 @@ img{
 .slider-title{
   position: absolute;
   width: 920px;
+  margin: 0;
   color:black;
   top: 185px;
   left: 400px;
@@ -109,6 +119,7 @@ img{
 .slider-text{
   position: absolute;
   width: 920px;
+  margin: 0;
   bottom: 260px;
   left: 400px;
   color:black;

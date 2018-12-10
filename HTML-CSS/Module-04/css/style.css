@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto');
 html {
   box-sizing: border-box;
 }
@@ -23,6 +23,7 @@ html {
 }
 .logo {
   display: block;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 30px;
@@ -98,16 +99,11 @@ html {
 .image-products:nth-of-type(4n) {
   margin-right: 0;
 }
-.image{
-  margin-bottom: 20px;
-}
-.name-products:hover {
+.image-products:hover .name-products {
   background-color: #1abc9c;
-  cursor: pointer;
 }
-.price-products:hover {
+.image-products:hover .price-products {
   background-color: #7fd9c7;
-  cursor: pointer;
 }
 .products-title {
   font-family: "Roboto Black", sans-serif;
