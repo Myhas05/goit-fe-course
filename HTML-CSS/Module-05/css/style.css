@@ -278,9 +278,9 @@ img {
 }
 .footer-text {
   position: absolute;
-  top: 50%;
+  top: 25px;
   left: 50%;
-  transform: translateY(50%);
+  transform: translateX(-50%);
   color: #fefefe;
 }
 .footer-link {
