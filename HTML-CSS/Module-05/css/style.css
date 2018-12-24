@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html {
   box-sizing: border-box;
   height: 100%;
@@ -27,7 +27,7 @@ img {
   position: relative;
   width: 1140px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
 }
 .footer-box {
   left: 0;
@@ -49,13 +49,14 @@ img {
   margin: 0;
   padding: 0;
   color: #555252;
-  font-family: Roboto;
+  font-family: "Roboto";
 }
 .logo:hover {
   color: #1abc9c;
 }
 .logo::first-letter {
   color: #1abc9c;
+  font-weight: 800;
 }
 .menu {
   display: block;
@@ -112,25 +113,26 @@ img {
   cursor: pointer;
 }
 .slider-button-prev {
-  left: 25px;
+  left: 0px;
 }
 .slider-button-next {
-  right: 25px;
+  right: 0px;
 }
 .slider-content {
   position: absolute;
   top: 220px;
-  left:195px;
+  left: 195px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.slider-text{
+.slider-text {
   margin-bottom: 15px;
   margin-top: 0;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Roboto";
+  font-weight: 800;
   font-size: 60px;
 }
 .slider-subtext {
@@ -140,18 +142,19 @@ img {
   font-family: "Roboto";
   font-size: 24px;
 }
-.section {
-  padding-top: 0;
-  padding-bottom: 0;
+.menu-collection {
+  padding-top: 100px;
+  background-color: #e9f0fd;
 }
 .title {
   font-family: "Roboto Black", sans-serif;
   font-size: 48px;
   text-align: center;
   color: #555252;
-  font-weight: bold;
+  font-family: "Roboto";
+  font-weight: 800;
   text-transform: uppercase;
-  margin: 100px 0;
+  margin: 0;
 }
 .title::after {
   content: "";
@@ -160,6 +163,7 @@ img {
   margin: 0 auto;
   border-bottom: 8px solid #1abc9c;
   margin-top: 30px;
+  margin-bottom: 100px;
 }
 .new-collection {
   position: relative;
@@ -190,12 +194,15 @@ img {
   cursor: pointer;
 }
 .products-title {
-  font-family: "Roboto Black", sans-serif;
+  font-family: "Roboto";
+  font-weight: 800;
   font-size: 18px;
   line-height: 45px;
   color: white;
   text-align: center;
   bottom: 45px;
+  position: absolute;
+  bottom: 0;
 }
 .name-products {
   text-transform: uppercase;
@@ -211,6 +218,9 @@ img {
   margin: 0px;
   width: 55px;
 }
+.collection-item:nth-of-type(4n) {
+  margin-right: 0;
+}
 .collection-item:hover .name-products {
   background-color: #1abc9c;
 }
@@ -220,62 +230,102 @@ img {
 .subtitle {
   background-color: #323232;
 }
+.collection-item:hover .overlay {
+  opacity: 1;
+}
 .hover-link {
   display: inline-block;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  margin-left: 10px;
-  margin-top: 75px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hart {
+  display: inline-block;
+  min-width: 50px;
+  min-height: 50px;
+  background-image: url(../img/1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-style: solid;
+  border: 2px solid white;
+  margin-right: 11px;
+}
+.line {
+  display: inline-block;
+  min-width: 50px;
+  min-height: 50px;
+  background-image: url(../img/2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-style: solid;
+  border: 2px solid white;
+  margin-right: 11px;
+}
+.clock {
+  display: inline-block;
+  min-width: 50px;
+  min-height: 50px;
+  background-image: url(../img/3.png);
+  background-repeat: no-repeat;
+  background-position: center;
   border-style: solid;
   border: 2px solid white;
 }
-.hover-link:last-child {
-  width: 180px;
-  text-align: center;
-  vertical-align: middle;
+.basket {
+  display: inline-block;
+  position: relative;
+  min-width: 180px;
+  min-height: 50px;
+  background-image: url(../img/4.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-color: #0a0a0a;
+  border-style: solid;
+  border: 2px solid white;
+}
+.block-text {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  font-family: "Open Sans";
   text-transform: uppercase;
   font-size: 14px;
-  margin-left: 30px;
-  margin-top: 0;
-  background-color: #0a0a0a;
-  opacity: 1;
-}
-.hover-link:first-child {
-  margin-left: 30px;
-}
-.hover-link:hover {
-  background-color: #1abc9c;
-  border: none;
-}
-.collection-item:hover .overlay {
-  opacity: 1;
-  border: none;
-}
-.image-link {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-}
-.image-link:last-child {
-  top: 10px;
-  left: 10px;
-}
-.hover-text {
   color: white;
-  text-align: center;
+}
+.hart:hover {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.line:hover {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.clock:hover {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.basket:hover {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
 }
 .footer-content {
   position: relative;
 }
 .footer-text {
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
   color: #fefefe;
+  margin: 0;
+  font-family: "Open Sans";
 }
 .footer-link {
+  display: inline-block;
   text-decoration: none;
   color: #fefefe;
 }
