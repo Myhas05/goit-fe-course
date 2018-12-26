@@ -33,7 +33,7 @@ img {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 90px;
+  min-height: 90px;
   background-color: #323232;
   text-align: center;
 }
@@ -156,6 +156,7 @@ img {
   font-weight: 800;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 100px;
 }
 .title::after {
   content: "";
@@ -164,7 +165,6 @@ img {
   margin: 0 auto;
   border-bottom: 8px solid #1abc9c;
   margin-top: 30px;
-  margin-bottom: 100px;
 }
 .new-collection {
   position: relative;
@@ -234,14 +234,16 @@ img {
   opacity: 1;
 }
 .hover-link {
-  display: inline-block;
   list-style: none;
   padding: 0;
-  margin-top: 75px;
-  margin-left: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .icon-link {
   display: inline-block;
+  margin-right: 11px;
 }
 .hart {
   display: inherit;
@@ -251,8 +253,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   border-style: solid;
-  border: 2px solid white;
-  margin-right: 11px;
+  border: 1px solid white;
 }
 .line {
   display: inherit;
@@ -262,8 +263,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   border-style: solid;
-  border: 2px solid white;
-  margin-right: 11px;
+  border: 1px solid white;
 }
 .clock {
   display: inherit;
@@ -273,7 +273,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   border-style: solid;
-  border: 2px solid white;
+  border: 1px solid white;
 }
 .basket {
   display: inherit;
@@ -283,14 +283,14 @@ img {
   background-repeat: no-repeat;
   background-color: #0a0a0a;
   border-style: solid;
-  border: 2px solid white;
-  background-position: 10% 50%;
+  border: 1px solid white;
+  background-position: 10% 50%, 80% 50%;
+  padding-top: 15px;
+  padding-left: 45px;
   font-family: "Open Sans";
   text-transform: uppercase;
   font-size: 14px;
   color: white;
-  padding-left: 55px;
-  padding-top: 15px;
 }
 .hart:hover {
   background-color: #1abc9c;
@@ -312,7 +312,7 @@ img {
   position: relative;
 }
 .footer-text {
-  padding-top: 35px;
+  padding: 36px 0;
   color: #fefefe;
   margin: 0;
   font-family: "Open Sans";
