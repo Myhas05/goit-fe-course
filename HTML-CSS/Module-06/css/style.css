@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.navigation {
+  display: flex;
+  min-height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333333;
+}
+.logo {
+  text-decoration: none;
+  font-size: 30px;
+  color: #95e1d3;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.header-menu {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+.menu-item {
+  list-style: none;
+}
+.menu-link {
+  text-decoration: none;
+  color: #95e1d3;
+  font-family: "Montserrat";
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.service-title {
+  font-size: 24px;
+  color: #333333;
+  font-family: "Kaushan Script";
+  text-align: center;
+  font-weight: 100;
+}
+.service-title::first-letter {
+  text-transform: uppercase;
+}
+.service-subtitle {
+  font-size: 30px;
+  color: #333333;
+  font-family: "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.service-subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.service-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.submenu-service {
+  width: 380px;
+  list-style: none;
+}
+.headline-text {
+  font-size: 14px;
+  color: #333333;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: justify;
+  padding-left: 80px;
+}
+.subtext {
+  font-size: 15px;
+  color: #999999;
+  font-family: "Roboto";
+  text-align: justify;
+  padding-left: 80px;
+}
+.info-text {
+  font-size: 15px;
+  color: #999999;
+  font-family: "Roboto";
+  text-align: center;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+.team-list {
+  list-style: none;
+}
+.name {
+  font-size: 14px;
+  color: #333333;
+  font-family: "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+}
+.work {
+  font-size: 15px;
+  color: #999999;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
