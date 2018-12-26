@@ -23,6 +23,11 @@ html {
   justify-content: space-between;
   background-color: #333333;
 }
+.page-footer{
+  min-height: 60px;
+  border-style: solid;
+  border: 1px solid #e5e5e5;
+}
 .logo {
   text-decoration: none;
   font-size: 30px;
@@ -45,6 +50,22 @@ html {
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
+}
+.menu-link::after{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 0 auto;
+  margin-top: 12px;
+  opacity:0;
+}
+.menu-link:hover:after{
+opacity: 1;
+}
+.menu-link:hover{
+  color: #f38181;
 }
 .service-title {
   font-size: 24px;
@@ -81,6 +102,36 @@ html {
 .submenu-service {
   width: 380px;
   list-style: none;
+}
+.alarm {
+  background-image: url(../img/ALARM.png);
+  background-repeat: no-repeat;
+  background-position: 7% 0;
+}
+.line {
+  background-image: url(../img/LINE\ GRAPH.png);
+  background-repeat: no-repeat;
+  background-position: 7% 0;
+}
+.computer {
+  background-image: url(../img/COMPUTER\ _\ OK.png);
+  background-repeat: no-repeat;
+  background-position: 7% 0;
+}
+.book {
+  background-image: url(../img/BOOK\ 2.png);
+  background-repeat: no-repeat;
+  background-position: 7% 0;
+}
+.home {
+  background-image: url(../img/HOME.png);
+  background-repeat: no-repeat;
+  background-position: 7% 0;
+}
+.image {
+  background-image: url(../img/IMAGE.png);
+  background-repeat: no-repeat;
+  background-position: 7% 0;
 }
 .headline-text {
   font-size: 14px;
@@ -124,4 +175,5 @@ html {
   font-weight: 300;
   font-style: italic;
   text-align: center;
+  text-transform: capitalize;
 }
