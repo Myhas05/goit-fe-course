@@ -285,10 +285,11 @@ img {
   border-style: solid;
   border: 1px solid white;
   background-position: 10% 50%, 80% 50%;
-  padding-top: 15px;
-  padding-left: 45px;
   font-family: "Open Sans";
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
   font-size: 14px;
   color: white;
 }
