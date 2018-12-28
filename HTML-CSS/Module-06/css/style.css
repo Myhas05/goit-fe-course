@@ -34,6 +34,7 @@ html {
   color: #95e1d3;
   font-family: "Montserrat";
   font-weight: bold;
+  transition: color 200ms linear;
 }
 .logo:hover {
   color: #f38181;
@@ -53,6 +54,7 @@ html {
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
+  transition: color 200ms linear; 
 }
 .menu-link::after {
   content: "";
@@ -63,6 +65,7 @@ html {
   margin: 0 auto;
   margin-top: 12px;
   opacity: 0;
+  transition: opacity 200ms linear;
 }
 .menu-link:hover:after {
   opacity: 1;
@@ -185,6 +188,7 @@ html {
   width: 380px;
   height: 470px;
   background: linear-gradient(rgb(239, 140, 138), rgb(242, 215, 135));
+  transition: box-shadow, opacity 200ms linear;
 }
 .overlay:hover {
   opacity: 0.9;
@@ -199,6 +203,7 @@ html {
 .icon-link {
   display: inline-block;
   background-color: #fce38a;
+  transition: background-color 200ms linear;
 }
 .facebook {
   display: inherit;
@@ -274,6 +279,7 @@ html {
   color: #333333;
   font-family: "Montserrat";
   text-align: center;
+  transition: color 200ms linear;
 }
 .footer-link:hover {
   color: #f38181;
