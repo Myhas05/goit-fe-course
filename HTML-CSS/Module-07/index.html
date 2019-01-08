@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Module-07</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
-    integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
-    crossorigin="anonymous"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+      integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
   </head>
@@ -28,98 +28,77 @@
       </nav>
     </header>
     <main class="wrapper content">
-      <h2 class="title-service">services</h2>
-      <p class="subtitle">Proin iaculis purus consequat sem cure.</p>
       <section class="services">
+        <h2 class="title-service">services</h2>
+        <p class="subtitle">Proin iaculis purus consequat sem cure.</p>
         <ul class="services-list">
           <li class="services-menu">
-            <div class="image-content">
-              <div class="image-menu">
-                <img
-                  class="services-image"
-                  src="./img/Basket.png"
-                  alt="basket"
-                />
-              </div>
-              <p class="services-text">E-Commerce</p>
-              <p class="services-subtext">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus possimus minus perferendis dolores alias pariatur
-                itaque a dignissimos et quidem, repudiandae quae quos mollitia
-                nisi suscipit error sit facilis architecto.
-              </p>
-            </div>
+            <div class="service-image basket"></div>
+            <p class="services-text">E-Commerce</p>
+            <p class="services-subtext">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Necessitatibus possimus minus perferendis dolores alias pariatur
+              itaque a dignissimos et quidem, repudiandae quae quos mollitia
+              nisi suscipit error sit facilis architecto.
+            </p>
           </li>
           <li class="services-menu">
-            <div class="image-content">
-              <div class="image-menu">
-                <img
-                  class="services-image"
-                  src="./img/Laptop.png"
-                  alt="basket"
-                />
-              </div>
-              <p class="services-text">responsive web</p>
-              <p class="services-subtext">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus possimus minus perferendis dolores alias pariatur
-                itaque a dignissimos et quidem, repudiandae quae quos mollitia
-                nisi suscipit error sit facilis architecto.
-              </p>
-            </div>
+            <div class="service-image laptop"></div>
+            <p class="services-text">responsive web</p>
+            <p class="services-subtext">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Necessitatibus possimus minus perferendis dolores alias pariatur
+              itaque a dignissimos et quidem, repudiandae quae quos mollitia
+              nisi suscipit error sit facilis architecto.
+            </p>
           </li>
           <li class="services-menu">
-            <div class="image-content">
-              <div class="image-menu">
-                <img
-                  class="services-image"
-                  src="./img/Locked.png"
-                  alt="basket"
-                />
-              </div>
-              <p class="services-text">web security</p>
-              <p class="services-subtext">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus possimus minus perferendis dolores alias pariatur
-                itaque a dignissimos et quidem, repudiandae quae quos mollitia
-                nisi suscipit error sit facilis architecto.
-              </p>
-            </div>
+            <div class="service-image locked"></div>
+            <p class="services-text">web security</p>
+            <p class="services-subtext">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Necessitatibus possimus minus perferendis dolores alias pariatur
+              itaque a dignissimos et quidem, repudiandae quae quos mollitia
+              nisi suscipit error sit facilis architecto.
+            </p>
           </li>
         </ul>
       </section>
     </main>
-    <footer class="footer">
-      <div class="wrapper footer-page">
+    <section class="contact">
+      <div class="wrapper contact-page">
         <h2 class="footer-text">contact us</h2>
         <p class="subtitle">Proin iaculis purus consequat sem cure.</p>
-        <div class="form-text">
-          <form action="#" class="form-content">
+        <form action="#" class="form-content">
+          <span class="input-content">
             <input
               type="text"
               class="content-text"
               size="14"
               placeholder=" Your Name *"
-              required
-            />
+              required/>
             <input
               type="text"
               class="content-text"
               placeholder=" Your E-mail *"
-              required
-            />
-            <input type="text" class="content-text" placeholder=" Subject" />
-          </form>
+              required/>
+            <input type="text" class="content-text" placeholder=" Subject"
+          /></span>
           <textarea
+            class="textarea-text"
             name="textarea"
             cols="30"
             rows="10"
             placeholder=" Your Message*"
             required
           ></textarea>
-        </div>
-        <button class="button-form">send message</button>
+          <span class="button">
+            <button type="submit" class="button-form">
+              send message
+            </button></span
+          >
+        </form>
       </div>
-    </footer>
+    </section>
   </body>
 </html>
