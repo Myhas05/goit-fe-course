@@ -295,7 +295,7 @@ input[type="button"]:hover {
     margin-bottom: 55px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 960px) {
   .container {
     background-image: url(../img/Object.png);
     background-repeat: no-repeat;
@@ -341,4 +341,16 @@ input[type="button"]:hover {
     margin-bottom: 55px;
   }
 }
-}
+/* @media screen and (max-width: 960px) {
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .container {
+    background-image: url(../img/Object.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px;
+  }
+
+} */
