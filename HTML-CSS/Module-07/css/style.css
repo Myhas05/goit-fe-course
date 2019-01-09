@@ -44,6 +44,7 @@
 }
 .services {
   padding-top: 130px;
+  padding-bottom: 110px;
 }
 .title-service {
   margin: 0 auto;
@@ -75,10 +76,12 @@
   max-width: 280px;
   text-align: center;
 }
-.service-image {
+.services-menu.basket::before {
+  content: "";
   display: block;
   width: 66px;
   height: 66px;
+  background-image: url(../img/Basket.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-radius: 33px;
@@ -87,14 +90,33 @@
   margin: auto;
   margin-bottom: 25px;
 }
-.basket {
-  background-image: url(../img/Basket.png);
-}
-.laptop {
+.services-menu.laptop::before {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 66px;
   background-image: url(../img/Laptop.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 33px;
+  background-color: #ffffff;
+  border: 3px solid #fed136;
+  margin: auto;
+  margin-bottom: 25px;
 }
-.locked {
+.services-menu.locked::before {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 66px;
   background-image: url(../img/Locked.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 33px;
+  background-color: #ffffff;
+  border: 3px solid #fed136;
+  margin: auto;
+  margin-bottom: 25px;
 }
 .services-text {
   font-size: 18px;
@@ -111,11 +133,9 @@
   font-family: "Roboto Slab";
   text-align: center;
   margin: 0;
-  margin-bottom: 110px;
 }
 .footer-text {
   margin: 0 auto;
-  padding-top: 110px;
   font-size: 40px;
   color: #ffffff;
   font-family: "Montserrat";
@@ -136,15 +156,21 @@
   font-family: "Montserrat";
   font-weight: bold;
   text-align: center;
-  cursor: pointer;
+ 
 }
-.button{
+.button-form:hover{
+   cursor: pointer;
+   color: #222222;
+}
+button{
   margin: auto;
-  padding-top: 30px;
+  margin-top: 30px;
+  padding: 0;
 }
 .contact {
   width: 100%;
   background-color: #222222;
+  padding-top: 110px;
 }
 .contact-page {
   min-height: 676px;
@@ -155,10 +181,9 @@
 .form-content {
   display: flex;
   flex-wrap: wrap;
-  min-width: 455px;
   justify-content: space-between;
   align-content: center;
- }
+}
 .input-content {
   display: flex;
   min-width: 455px;
