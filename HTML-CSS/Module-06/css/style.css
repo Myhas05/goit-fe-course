@@ -161,7 +161,7 @@ html {
   text-align: justify;
   padding-left: 80px;
 }
-.our-team{
+.our-team {
   padding-bottom: 80px;
   padding-top: 90px;
 }
@@ -178,6 +178,7 @@ html {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 .team-list {
   list-style: none;
@@ -194,11 +195,18 @@ html {
     rgba(243, 129, 129, 0.9) 100%
   );
   transition: box-shadow, opacity 200ms linear;
+  z-index: 1;
 }
 .team-list:hover .overlay {
   transition: transform 0.2s linear, opacity 0.2s linear;
   opacity: 1;
   box-shadow: 10px 10px 0 rgba(149, 225, 211, 1);
+  transform: translate(-10px, -10px);
+}
+.team-list-image {
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}
+.team-list:hover .team-list-image {
   transform: translate(-10px, -10px);
 }
 .hover-link {
