@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -8,6 +8,13 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+.container {
+  background-image: url(../img/Object.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #333333;
+  min-height: 700px;
 }
 .wrapper {
   max-width: 960px;
@@ -24,24 +31,32 @@ html {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.logo:hover {
+  color: #ff4e50;
   cursor: pointer;
 }
 input[type="button"] {
   font-size: 14px;
+  font-weight: bold;
   color: #ffffff;
   font-family: "Montserrat";
-  /* font-weight: bold; */
   text-align: center;
   text-transform: uppercase;
   width: 90px;
   height: 36px;
   background-color: rgba(26, 25, 21, 0);
   border: none;
+  margin: 0;
+  padding: 0;
 }
 input[type="button"]:hover {
   border-radius: 18px;
   background-color: rgba(26, 25, 21, 0);
   border: 2px solid #ffffff;
+  cursor: pointer;
 }
 .title-text {
   color: #ffffff;
@@ -49,7 +64,7 @@ input[type="button"]:hover {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
 }
 .subtitle-text {
   font-size: 24px;
@@ -57,18 +72,25 @@ input[type="button"]:hover {
   font-family: "Roboto";
   font-weight: 300;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
 }
 .button-header {
+  display: block;
+  min-width: 280px;
+  min-height: 40px;
   font-size: 14px;
   color: #ffffff;
   font-family: "Montserrat";
+  text-decoration: none;
   font-weight: bold;
   text-align: center;
-  width: 280px;
-  height: 40px;
+  line-height: 40px;
   border-radius: 20px;
   background-color: #ff4e50;
+}
+.button-header:hover {
+  cursor: pointer;
+  color: #333333;
 }
 .title-content {
   font-size: 22px;
@@ -76,6 +98,7 @@ input[type="button"]:hover {
   font-family: "Montserrat";
   font-weight: bold;
   text-align: center;
+  margin: 0 auto;
 }
 .partners {
   list-style: none;
@@ -86,6 +109,8 @@ input[type="button"]:hover {
   font-family: "Montserrat";
   font-weight: bold;
   text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
 }
 .partners-subtitle {
   font-size: 14px;
@@ -93,12 +118,14 @@ input[type="button"]:hover {
   font-family: "Roboto";
   font-weight: 300;
   text-align: center;
+  margin: 0;
 }
 .partners-content {
   position: relative;
 }
 .partners-image {
   border-radius: 50%;
+  margin-bottom: 40px;
 }
 .partners-content::before {
   content: "";
@@ -131,6 +158,8 @@ input[type="button"]:hover {
   background-color: #4e73db;
 }
 .button-content {
+  display: block;
+  margin: 0 auto;
   font-size: 14px;
   color: #ff4e50;
   font-family: "Montserrat";
@@ -142,14 +171,14 @@ input[type="button"]:hover {
   background-color: #ffffff;
   border: 2px solid #ff4e50;
 }
-
+.button-content:hover {
+  color: #ffffff;
+  background-color: #ff4e50;
+  cursor: pointer;
+}
 @media screen and (min-width: 320px) {
   .container {
-    background-image: url(../img/Smart.png);
-    background-repeat: no-repeat;
-    background-position: center;
     min-height: 540px;
-    background-color: #333333;
   }
   .navigation {
     display: flex;
@@ -157,17 +186,29 @@ input[type="button"]:hover {
     align-items: center;
   }
   input[type="button"] {
-    margin-bottom: 120px;
+    margin-top: 20px;
+    margin-bottom: 115px;
   }
   .page-header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
   }
   .logo {
     margin-bottom: 40px;
   }
   .title-text {
     font-size: 30px;
+    padding-bottom: 15px;
+  }
+  .subtitle-text {
+    padding-bottom: 20px;
+  }
+  .content {
+    margin-bottom: 55px;
+  }
+  .title-content {
+    padding-bottom: 20px;
   }
   .button-header {
     margin: 0 auto;
@@ -178,6 +219,10 @@ input[type="button"]:hover {
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    padding: 0;
+  }
+  .partners-content:nth-last-child(1) {
+    margin-bottom: 40px;
     padding: 0;
   }
   .partners-content {
@@ -187,46 +232,59 @@ input[type="button"]:hover {
     align-items: center;
     margin: 0;
     padding: 0;
-  }
-  .button-content {
-    margin: auto;
-    padding: 0;
-    margin-bottom: 55px;
+    padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    background-image: url(../img/Tablet.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #333333;
     min-height: 700px;
   }
   .navigation {
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 160px;
   }
   input[type="button"] {
-    margin-bottom: 120px;
+    margin: 0;
   }
   .page-header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
   }
   .logo {
-    margin-bottom: 40px;
+    margin: 0;
   }
   .title-text {
+    max-width: 510px;
     font-size: 52px;
+    padding-bottom: 40px;
+  }
+  .subtitle-text {
+    padding-bottom: 30px;
   }
   .button-header {
     margin: 0 auto;
   }
+  .content {
+    margin-bottom: 55px;
+    max-width: 450px;
+  }
+  .title-content {
+    padding-bottom: 30px;
+  }
   .partners {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-flow: row wrap;
     margin: 0;
+    padding: 0;
+  }
+  .partners-content:nth-last-child(2) {
+    margin-bottom: 40px;
     padding: 0;
   }
   .partners-content {
@@ -236,45 +294,56 @@ input[type="button"]:hover {
     align-items: center;
     margin: 0;
     padding: 0;
-  }
-  .button-content {
-    margin: auto;
-    padding: 0;
-    margin-bottom: 55px;
+    padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  .container {
-    background-image: url(../img/Object.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 700px;
-    background-color: #333333;
-  }
   .navigation {
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 160px;
   }
   input[type="button"] {
-    margin-bottom: 120px;
+    margin: 0;
   }
   .page-header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
   }
   .logo {
-    margin-bottom: 40px;
+    margin: 0;
   }
   .title-text {
+    max-width: 510px;
     font-size: 52px;
+    padding-bottom: 40px;
+  }
+  .subtitle-text {
+    padding-bottom: 30px;
   }
   .button-header {
     margin: 0 auto;
   }
+  .content {
+    margin-bottom: 55px;
+    max-width: 960px;
+  }
+  .title-content {
+    padding-bottom: 30px;
+  }
   .partners {
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
     margin: 0;
+    padding: 0;
+  }
+  .partners-content:nth-last-child(-n + 4) {
+    margin-bottom: 40px;
     padding: 0;
   }
   .partners-content {
@@ -284,10 +353,5 @@ input[type="button"]:hover {
     align-items: center;
     margin: 0;
     padding: 0;
-  }
-  .button-content {
-    margin: auto;
-    padding: 0;
-    margin-bottom: 55px;
   }
 }
