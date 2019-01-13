@@ -76,7 +76,7 @@ input[type="button"]:hover {
 }
 .button-header {
   display: block;
-  min-width: 280px;
+  max-width: 280px;
   min-height: 40px;
   font-size: 14px;
   color: #ffffff;
@@ -87,10 +87,17 @@ input[type="button"]:hover {
   line-height: 40px;
   border-radius: 20px;
   background-color: #ff4e50;
+  margin: 0 auto; 
 }
 .button-header:hover {
   cursor: pointer;
   color: #333333;
+}
+.main-partners {
+  padding-top: 70px;
+}
+.content {
+  padding-bottom: 55px;
 }
 .title-content {
   font-size: 22px;
@@ -110,7 +117,7 @@ input[type="button"]:hover {
   font-weight: bold;
   text-align: center;
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .partners-subtitle {
   font-size: 14px;
@@ -124,6 +131,8 @@ input[type="button"]:hover {
   position: relative;
 }
 .partners-image {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 40px;
 }
@@ -170,6 +179,7 @@ input[type="button"]:hover {
   border-radius: 20px;
   background-color: #ffffff;
   border: 2px solid #ff4e50;
+  margin-top: 30px;
 }
 .button-content:hover {
   color: #ffffff;
@@ -182,8 +192,9 @@ input[type="button"]:hover {
   }
   .navigation {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
   }
   input[type="button"] {
     margin-top: 20px;
@@ -194,24 +205,15 @@ input[type="button"]:hover {
     flex-direction: column;
     margin-bottom: 70px;
   }
-  .logo {
-    margin-bottom: 40px;
-  }
   .title-text {
     font-size: 30px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
   .subtitle-text {
-    padding-bottom: 20px;
-  }
-  .content {
-    margin-bottom: 55px;
+    margin-bottom: 20px;
   }
   .title-content {
-    padding-bottom: 20px;
-  }
-  .button-header {
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
   .partners {
     display: flex;
@@ -222,7 +224,7 @@ input[type="button"]:hover {
     padding: 0;
   }
   .partners-content:nth-last-child(1) {
-    margin-bottom: 40px;
+    margin-bottom: 0;
     padding: 0;
   }
   .partners-content {
@@ -232,7 +234,7 @@ input[type="button"]:hover {
     align-items: center;
     margin: 0;
     padding: 0;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -241,7 +243,7 @@ input[type="button"]:hover {
   }
   .navigation {
     display: flex;
-    flex-flow: row;
+    flex-flow: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 50px;
@@ -253,7 +255,6 @@ input[type="button"]:hover {
   .page-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
   }
   .logo {
     margin: 0;
@@ -266,92 +267,28 @@ input[type="button"]:hover {
   .subtitle-text {
     padding-bottom: 30px;
   }
-  .button-header {
-    margin: 0 auto;
-  }
-  .content {
-    margin-bottom: 55px;
+    .content {
     max-width: 450px;
   }
   .title-content {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
   .partners {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    margin: 0;
-    padding: 0;
   }
-  .partners-content:nth-last-child(2) {
-    margin-bottom: 40px;
+  .partners-content:nth-last-child(-n+2) {
+    margin-bottom: 0;
     padding: 0;
-  }
-  .partners-content {
-    display: flex;
-    width: 225px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  .navigation {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 50px;
-    padding-bottom: 160px;
-  }
-  input[type="button"] {
-    margin: 0;
-  }
-  .page-header {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 70px;
-  }
-  .logo {
-    margin: 0;
-  }
-  .title-text {
-    max-width: 510px;
-    font-size: 52px;
-    padding-bottom: 40px;
-  }
-  .subtitle-text {
-    padding-bottom: 30px;
-  }
-  .button-header {
-    margin: 0 auto;
-  }
   .content {
-    margin-bottom: 55px;
     max-width: 960px;
   }
-  .title-content {
-    padding-bottom: 30px;
-  }
-  .partners {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    margin: 0;
-    padding: 0;
-  }
   .partners-content:nth-last-child(-n + 4) {
-    margin-bottom: 40px;
-    padding: 0;
-  }
-  .partners-content {
-    display: flex;
-    width: 225px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
   }
 }
