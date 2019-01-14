@@ -38,13 +38,25 @@ html {
   color: #ff4e50;
   cursor: pointer;
 }
-input[type="button"] {
+.button-header {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.button-link {
+  display: block;
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
   font-family: "Montserrat";
   text-align: center;
+  line-height: 36px;
   text-transform: uppercase;
+  text-decoration: none;
   width: 90px;
   height: 36px;
   background-color: rgba(26, 25, 21, 0);
@@ -52,7 +64,7 @@ input[type="button"] {
   margin: 0;
   padding: 0;
 }
-input[type="button"]:hover {
+.button-link:hover {
   border-radius: 18px;
   background-color: rgba(26, 25, 21, 0);
   border: 2px solid #ffffff;
@@ -74,7 +86,7 @@ input[type="button"]:hover {
   text-align: center;
   margin: 0 auto;
 }
-.button-header {
+.promo-button {
   display: block;
   max-width: 280px;
   min-height: 40px;
@@ -87,9 +99,9 @@ input[type="button"]:hover {
   line-height: 40px;
   border-radius: 20px;
   background-color: #ff4e50;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-.button-header:hover {
+.promo-button:hover {
   cursor: pointer;
   color: #333333;
 }
@@ -194,9 +206,8 @@ input[type="button"]:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
   }
-  input[type="button"] {
+  .button-link {
     margin-top: 20px;
     margin-bottom: 115px;
   }
@@ -249,7 +260,7 @@ input[type="button"]:hover {
     padding-top: 50px;
     padding-bottom: 160px;
   }
-  input[type="button"] {
+  .button-link {
     margin: 0;
   }
   .page-header {
@@ -262,12 +273,12 @@ input[type="button"]:hover {
   .title-text {
     max-width: 510px;
     font-size: 52px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
   .subtitle-text {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
-    .content {
+  .content {
     max-width: 450px;
   }
   .title-content {
@@ -278,7 +289,7 @@ input[type="button"]:hover {
     justify-content: space-between;
     flex-flow: row wrap;
   }
-  .partners-content:nth-last-child(-n+2) {
+  .partners-content:nth-last-child(-n + 2) {
     margin-bottom: 0;
     padding: 0;
   }
