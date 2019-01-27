@@ -1,0 +1,19 @@
+.our-team__team-item:hover .our-team__overlay {
+    -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+    transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear, opacity 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear,
+      -webkit-transform 0.2s linear;
+    opacity: 1;
+    -webkit-box-shadow: 10px 10px 0 rgba(149, 225, 211, 1);
+    box-shadow: 10px 10px 0 rgba(149, 225, 211, 1);
+    -webkit-transform: translate(-10px, -10px);
+    -ms-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+  }
+  .our-team__team-item:hover .our-team__image {
+    -webkit-transform: translate(-10px, -10px);
+    -ms-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+  }

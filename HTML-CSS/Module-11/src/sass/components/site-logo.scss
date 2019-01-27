@@ -1,0 +1,14 @@
+.site-logo {
+  font-size: 30px;
+  color: $first-color-text;
+  font-family: $second-font;
+  font-weight: bold;
+  -webkit-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  transition: color 200ms linear;
+
+  &:hover,
+  &:focus {
+    color: $background-color;
+  }
+}

@@ -111,6 +111,10 @@ html {
 .site-navigation__link:focus {
   color: #fce38a;
 }
+.site-navigation__icon{
+  width: 20px;
+  height: 20px;
+}
 .site-banner__title {
   font-size: 72px;
   color: #ffffff;
