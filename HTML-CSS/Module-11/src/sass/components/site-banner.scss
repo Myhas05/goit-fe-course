@@ -1,0 +1,42 @@
+.site-banner {
+  display: block;
+
+  &__title {
+    font-size: 72px;
+    color: $first-color-text;
+    font-family: $third-font;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  &__subtitle {
+    font-size: 150px;
+    line-height: 140px;
+    color: $first-color-text;
+    font-family: $second-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 125px;
+  }
+  &__link {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    color: $first-color-text;
+    font-family: $second-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 32px;
+    border: 4px solid $first-color-text;
+    background-color: transparent;
+    padding: 0;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+      border: 4px solid $hover-color;
+      color: $hover-color;
+      cursor: pointer;
+    }
+  }
+}

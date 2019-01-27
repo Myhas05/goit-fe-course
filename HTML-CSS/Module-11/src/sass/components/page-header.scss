@@ -1,0 +1,19 @@
+.page-header {
+    height: 1000px;
+    background: linear-gradient(
+        to top,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url("../images/banner.jpg") no-repeat center;
+    background-size: cover;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .page-header {
+    background-image: url(../img/banner@2x.jpg);
+  }
+}
+  

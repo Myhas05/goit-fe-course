@@ -1,0 +1,38 @@
+.overlay__icon-link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: $background-color;
+  width: 55px;
+  height: 55px;
+  -webkit-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
+}
+.overlay__icon-link svg {
+  display: inline-block;
+  fill: $hover-color;
+  width: 55px;
+  height: 55px;
+  border: 14px solid $background-color;
+  -webkit-transition: border 200ms linear;
+  -o-transition: border 200ms linear;
+  transition: border 200ms linear;
+
+  &:hover,
+  &:focus {
+    fill: $first-color-text;
+    border: 14px solid $hover-color;
+  }
+}

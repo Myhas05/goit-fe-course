@@ -1,0 +1,11 @@
+.section-title {
+  font-size: 24px;
+  color: $second-color-text;
+  font-family: $third-font;
+  font-weight: 100;
+  margin-bottom: 25px;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
