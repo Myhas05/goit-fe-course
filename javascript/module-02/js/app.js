@@ -9,9 +9,8 @@ do {
   numbers.push(Number(input));
   console.log(numbers);
 } while (input !== null);
-{
-  for (let i = 0; i < numbers.length; i += 1) {
-    total += numbers[i];
-  }
+
+for (let i = 0; i < numbers.length; i += 1) {
+  total += numbers[i];
 }
 console.log(total);

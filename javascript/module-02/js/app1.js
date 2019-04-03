@@ -12,9 +12,10 @@ while (true) {
   } else if (passwords.includes(userPassword)) {
     alert('Welcome!!!');
     break;
-  } else if (attemptsLeft > 0) {
-    alert(`Invalid password, you have ${attemptsLeft} attempts left `);
+  } else if (attemptsLeft > 1) {
     attemptsLeft -= 1;
+    console.log(attemptsLeft);
+    alert(`Invalid password, you have ${attemptsLeft} attempts left `);
   } else {
     alert('Your attempts have ended, your account has been blocked!');
     break;
