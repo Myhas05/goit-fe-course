@@ -2,66 +2,66 @@
 
 const Notepad = function(notes = []) {
   this.notes = notes;
-};
 
-Notepad.prototype.getNotes = function() {
-  return this.notes;
-};
-Notepad.prototype.findNoteById = function(id) {
-  for (let i = 0; i < this.notes.length; i += 1) {
-    const notation = this.notes[i];
-    if (notation.id === id) {
-      return notation;
+  this.getNotes = function() {
+    return this.notes;
+  };
+  this.findNoteById = function(id) {
+    for (let i = 0; i < this.notes.length; i += 1) {
+      const notation = this.notes[i];
+      if (notation.id === id) {
+        return notation;
+      }
     }
-  }
-};
-Notepad.prototype.saveNote = function(note) {
-  this.notes.push(note);
-  return note;
-};
-Notepad.prototype.deleteNote = function(id) {
-  for (let i = 0; i < this.notes.length; i += 1) {
-    const notation = this.notes[i];
-    if (notation.id === id) {
-      this.notes.splice(i, 1);
-      return;
+  };
+  this.saveNote = function(note) {
+    this.notes.push(note);
+    return note;
+  };
+  this.deleteNote = function(id) {
+    for (let i = 0; i < this.notes.length; i += 1) {
+      const notation = this.notes[i];
+      if (notation.id === id) {
+        this.notes.splice(i, 1);
+        return;
+      }
     }
-  }
-};
-Notepad.prototype.updateNoteContent = function(id, updatedContent) {
-  const notation = this.findNoteById(id);
+  };
+  this.updateNoteContent = function(id, updatedContent) {
+    const notation = this.findNoteById(id);
 
-  for (const key in updatedContent) {
-    notation[key] = updatedContent[key];
-  }
-  return notation;
-};
-Notepad.prototype.updateNotePriority = function(id, priority) {
-  const newPriority = this.findNoteById(id);
-  newPriority.priority = priority;
-  return newPriority;
-};
-Notepad.prototype.filterNotesByQuery = function(query) {
-  const newNote = [];
-  for (const note of this.notes) {
-    query = query.toLowerCase();
-    if (
-      note.title.toLowerCase().includes(query) ||
-      note.body.toLowerCase().includes(query)
-    ) {
-      newNote.push(note);
+    for (const key in updatedContent) {
+      notation[key] = updatedContent[key];
     }
-  }
-  return newNote;
-};
-Notepad.prototype.filterNotesByPriority = function(priority) {
-  const newNote = [];
-  for (const note of this.notes) {
-    if (note.priority === priority) {
-      newNote.push(note);
+    return notation;
+  };
+  this.updateNotePriority = function(id, priority) {
+    const newPriority = this.findNoteById(id);
+    newPriority.priority = priority;
+    return newPriority;
+  };
+  this.filterNotesByQuery = function(query) {
+    const newNote = [];
+    for (const note of this.notes) {
+      query = query.toLowerCase();
+      if (
+        note.title.toLowerCase().includes(query) ||
+        note.body.toLowerCase().includes(query)
+      ) {
+        newNote.push(note);
+      }
     }
-  }
-  return newNote;
+    return newNote;
+  };
+  this.filterNotesByPriority = function(priority) {
+    const newNote = [];
+    for (const note of this.notes) {
+      if (note.priority === priority) {
+        newNote.push(note);
+      }
+    }
+    return newNote;
+  };
 };
 
 Notepad.Priority = {
