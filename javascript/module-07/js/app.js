@@ -148,7 +148,28 @@ console.log(getUsersByFriend(users, 'Goldie Gentry'));
 //==============================================================================
 // Дополнительное задание
 
+const getAllSkills = (skills, user) => {
+  skills.push(...user.skills);
+  return skills;
+};
+
+const checkUniqueSkills = (skills, skill) => {
+  if (!skills.includes(skill)) {
+    skills.push(skill);
+  }
+  return skills;
+};
+
 const getUniqueSkills = users => {
-  return users.sort(user => user.skills);
+  return users
+    .reduce(getAllSkills, [])
+    .reduce(checkUniqueSkills, [])
+    .sort();
 };
 console.log(getUniqueSkills(users));
+
+const getNamesSortedByFriendsCount = users => {
+  return users.sort((a, b) => a.friends.length > b.friends.length);
+};
+
+console.log(getNamesSortedByFriendsCount(users));
