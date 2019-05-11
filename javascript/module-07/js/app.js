@@ -103,7 +103,9 @@ console.log(getUsersByEyeColor(users, 'blue'));
 // Получить массив имен пользователей по полу (поле gender).
 
 const getUsersByGender = (users, gender) => {
-  return users.filter(user => user.gender === gender);
+  return users
+  .filter(user => user.gender === gender)
+  .map(user => user.name);
 };
 console.log(getUsersByGender(users, 'male'));
 
