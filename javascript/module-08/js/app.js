@@ -1,93 +1,129 @@
 'use strict';
-class Notepad {
-  constructor(notes) {
-    this._notes = notes;
-  }
 
-  get notes() {
-    return this._notes;
-  }
+const quizData = {
+  title: 'Тест на базовый уровень JavaScript.',
+  questions: [
+    {
+      question: 'Что возвращает метод Array.prototype.filter()?',
+      choices: [
+        'Массив, если результат работы содержит более одного элемента',
+        'Один элемент, если только он прошел фильтрацию',
+        'Всегда массив',
+      ],
+      answer: 2,
+    },
+    {
+      question: 'Как получить список всех ключей объекта obj?',
+      choices: [
+        'obj.keys()',
+        'Object.keys(obj)',
+        'obj.keys',
+        'Object.getKeys(obj)',
+      ],
+      answer: 1,
+    },
+    {
+      question: 'Что такое статическое свойство класса?',
+      choices: [
+        'Свойство доступное только экземплярам, но не классу',
+        'Свойство доступное только классу, но не его экземплярам',
+        'Свойство которое нельзя изменять после создания',
+      ],
+      answer: 1,
+    },
+    {
+      question: 'Что такое обещание (promise)?',
+      choices: [
+        'Функция, представляющая конечный результат асинхронной операции',
+        'Данные полученные в результате асинхронной операции',
+        'Объект, представляющий конечный результат асинхронной операции',
+      ],
+      answer: 2,
+    },
+    {
+      question: 'Выберите не существующий HTTP-метод.',
+      choices: ['PUT', 'GET', 'GRAB', 'DELETE', 'PATCH'],
+      answer: 2,
+    },
+    {
+      question: 'Какой командой будет запускаться npm-скрипт с именем server?',
+      choices: [
+        'npm server',
+        'npm start server',
+        'npm execute server',
+        'npm run server',
+      ],
+      answer: 3,
+    },
+  ],
+};
 
-  findNoteById = id => this._notes.find(note => note.id === id);
+{
+  /* <section>
+  <h3>1. Текст вопроса</h3>
 
-  saveNote = note => (this._notes = [...this._notes, note]);
-
-  deleteNote(id) {
-    return (this._notes = this._notes.filter(note => note.id !== id));
-  }
-
-  updateNoteContent = (id, updatedContent) =>
-    Object.assign(this.findNoteById(id), updatedContent);
-
-  updateNotePriority(id, priority) {
-    const newPriority = this.findNoteById(id);
-    newPriority.priority = priority;
-    return newPriority;
-  }
-
-  filterNotesByQuery(query) {
-    query = query.toLowerCase();
-    return this._notes.filter(
-      note =>
-        note.title.toLowerCase().includes(query) ||
-        note.body.toLowerCase().includes(query),
-    );
-  }
-
-  filterNotesByPriority = priority =>
-    this.notes.filter(note => note.priority === priority);
+  <ol>
+    <li>
+      <label>
+        <input type="radio" name="" value="" />
+        Ответ 1
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="" value="" />
+        Ответ 2
+      </label>
+    </li>
+  </ol>
+</section> */
 }
-const PRIORITY_TYPES = {
-  LOW: 0,
-  NORMAL: 1,
-  HIGH: 2,
-};
+const testContainer = document.querySelector('.test-container');
+const testOne = createTestSection();
+const testTwo = createTestSection();
+const testThree = createTestSection();
+const button = document.querySelector('button');
 
-const ICON_TYPES = {
-  EDIT: 'edit',
-  DELETE: 'delete',
-  ARROW_DOWN: 'expand_more',
-  ARROW_UP: 'expand_less',
-};
+testContainer.insertBefore(testOne, button);
+testOne.appendChild(testTwo);
+testTwo.appendChild(testThree);
 
-const NOTE_ACTIONS = {
-  DELETE: 'delete-note',
-  EDIT: 'edit-note',
-  INCREASE_PRIORITY: 'increase-priority',
-  DECREASE_PRIORITY: 'decrease-priority',
-};
+function createTestSection(question, choices, answer) {
+  const section = document.createElement('section');
+  section.classList.add('sd');
 
-const initialNotes = [
-  {
-    id: 'id-1',
-    title: 'JavaScript essentials',
-    body:
-      'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
-    priority: PRIORITY_TYPES.HIGH,
-  },
-  {
-    id: 'id-2',
-    title: 'Refresh HTML and CSS',
-    body:
-      'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.',
-    priority: PRIORITY_TYPES.NORMAL,
-  },
-  {
-    id: 'id-3',
-    title: 'Get comfy with Frontend frameworks',
-    body:
-      'First should get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.',
-    priority: PRIORITY_TYPES.NORMAL,
-  },
-  {
-    id: 'id-4',
-    title: 'Winter clothes',
-    body:
-      "Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
-    priority: PRIORITY_TYPES.LOW,
-  },
-];
+  const sectionQuestion = document.createElement('h3');
+  sectionQuestion.textContent = question;
+  sectionQuestion.classList.add('section__question');
 
-const notepad = new Notepad(initialNotes);
+  const sectionList = document.createElement('ol');
+  const firstAnswerChoise = createTestList();
+  const secondAnswerChoise = createTestList();
+  const thirdAnswerChoise = createTestList();
+  const forthAnswerChoise = createTestList();
 
-console.log(notepad);
+  section.appendChild(sectionQuestion);
+  section.appendChild(sectionList);
+  sectionList.append(
+    firstAnswerChoise,
+    secondAnswerChoise,
+    thirdAnswerChoise,
+    forthAnswerChoise,
+  );
+
+  console.log(section);
+  return section;
+}
+
+function createTestList() {
+  const testList = document.createElement('li');
+  const label = document.createElement('label');
+  const input = document.createElement('input');
+
+  input.type = 'radio';
+  input.name = ' ';
+  input.value = ' ';
+  label.appendChild(input);
+  testList.appendChild(label);
+  return testList;
+}
