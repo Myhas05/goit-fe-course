@@ -1,129 +1,116 @@
 'use strict';
 
-const quizData = {
-  title: 'Тест на базовый уровень JavaScript.',
-  questions: [
-    {
-      question: 'Что возвращает метод Array.prototype.filter()?',
-      choices: [
-        'Массив, если результат работы содержит более одного элемента',
-        'Один элемент, если только он прошел фильтрацию',
-        'Всегда массив',
-      ],
-      answer: 2,
-    },
-    {
-      question: 'Как получить список всех ключей объекта obj?',
-      choices: [
-        'obj.keys()',
-        'Object.keys(obj)',
-        'obj.keys',
-        'Object.getKeys(obj)',
-      ],
-      answer: 1,
-    },
-    {
-      question: 'Что такое статическое свойство класса?',
-      choices: [
-        'Свойство доступное только экземплярам, но не классу',
-        'Свойство доступное только классу, но не его экземплярам',
-        'Свойство которое нельзя изменять после создания',
-      ],
-      answer: 1,
-    },
-    {
-      question: 'Что такое обещание (promise)?',
-      choices: [
-        'Функция, представляющая конечный результат асинхронной операции',
-        'Данные полученные в результате асинхронной операции',
-        'Объект, представляющий конечный результат асинхронной операции',
-      ],
-      answer: 2,
-    },
-    {
-      question: 'Выберите не существующий HTTP-метод.',
-      choices: ['PUT', 'GET', 'GRAB', 'DELETE', 'PATCH'],
-      answer: 2,
-    },
-    {
-      question: 'Какой командой будет запускаться npm-скрипт с именем server?',
-      choices: [
-        'npm server',
-        'npm start server',
-        'npm execute server',
-        'npm run server',
-      ],
-      answer: 3,
-    },
-  ],
-};
+import quizData from './quiz-data.js';
+const { title: quizTitle, questions: quizQuestions } = quizData;
 
-{
-  /* <section>
-  <h3>1. Текст вопроса</h3>
+const form = document.querySelector('form');
+const submitBtn = document.querySelector('button[type="submit"]');
+const formTitle = document.createElement('h2');
+formTitle.textContent = quizTitle;
+form.insertBefore(formTitle, submitBtn);
 
-  <ol>
-    <li>
-      <label>
-        <input type="radio" name="" value="" />
-        Ответ 1
-      </label>
-    </li>
-    <li>
-      <label>
-        <input type="radio" name="" value="" />
-        Ответ 2
-      </label>
-    </li>
-  </ol>
-</section> */
+const quizItems = createQuizItems(quizQuestions);
+submitBtn.before(...quizItems);
+
+// Создает одну li с одним ответом
+function createChoiceItem(choice, choiceIndex, questionIndex) {
+  const choiceItem = document.createElement('li');
+  const label = document.createElement('label');
+
+  const input = document.createElement('input');
+  input.setAttribute('type', 'radio');
+  input.setAttribute('name', `question-${questionIndex + 1}`);
+  input.setAttribute('value', `${choiceIndex}`);
+
+  label.append(input, choice);
+  choiceItem.appendChild(label);
+
+  return choiceItem;
 }
-const testContainer = document.querySelector('.test-container');
-const testOne = createTestSection();
-const testTwo = createTestSection();
-const testThree = createTestSection();
-const button = document.querySelector('button');
 
-testContainer.insertBefore(testOne, button);
-testOne.appendChild(testTwo);
-testTwo.appendChild(testThree);
+// Создает секцию с текстом вопроса и списком ol с ответами
+function createQuizItem(questionData, questionIndex) {
+  const quizItem = document.createElement('section');
+  quizItem.classList.add('test-question');
 
-function createTestSection(question, choices, answer) {
-  const section = document.createElement('section');
-  section.classList.add('sd');
+  const question = document.createElement('h3');
+  question.textContent = `${questionIndex + 1}. ${questionData.question}`;
 
-  const sectionQuestion = document.createElement('h3');
-  sectionQuestion.textContent = question;
-  sectionQuestion.classList.add('section__question');
-
-  const sectionList = document.createElement('ol');
-  const firstAnswerChoise = createTestList();
-  const secondAnswerChoise = createTestList();
-  const thirdAnswerChoise = createTestList();
-  const forthAnswerChoise = createTestList();
-
-  section.appendChild(sectionQuestion);
-  section.appendChild(sectionList);
-  sectionList.append(
-    firstAnswerChoise,
-    secondAnswerChoise,
-    thirdAnswerChoise,
-    forthAnswerChoise,
+  const choicesList = document.createElement('ol');
+  const choices = questionData.choices.map((choice, choiceIndex) =>
+    createChoiceItem(choice, choiceIndex, questionIndex),
   );
 
-  console.log(section);
-  return section;
+  choicesList.append(...choices);
+  quizItem.append(question, choicesList);
+
+  return quizItem;
 }
 
-function createTestList() {
-  const testList = document.createElement('li');
-  const label = document.createElement('label');
-  const input = document.createElement('input');
+// Создает список секций с вопросами
+function createQuizItems(quizQuestions) {
+  return quizQuestions.map((question, i) => createQuizItem(question, i));
+}
 
-  input.type = 'radio';
-  input.name = ' ';
-  input.value = ' ';
-  label.appendChild(input);
-  testList.appendChild(label);
-  return testList;
+// Проверка формы при submit
+
+const correctAnswer = quizQuestions.map(question => question.answer);
+console.log(correctAnswer);
+
+form.addEventListener('change', changeUserChoiiceForm);
+form.addEventListener('submit', submitUserChoiiceForm);
+
+function changeUserChoiiceForm(e) {
+  e.preventDefault();
+  const userChoiseAnswer = new FormData(e.currentTarget);
+  const userChoise = [];
+  userChoiseAnswer.forEach(value => {
+    userChoise.push(Number(value));
+    if (userChoise.length === quizQuestions.length) {
+      submitBtn.removeAttribute('disabled');
+    }
+  });
+}
+function submitUserChoiiceForm(e) {
+  e.preventDefault();
+
+  const formData = new FormData(e.currentTarget);
+  const userAnswers = [];
+
+  formData.forEach(value => {
+    userAnswers.push(Number(value));
+  });
+  console.log(userAnswers);
+
+  const checkedAnsewers = [];
+  userAnswers.forEach((answer, idx) => {
+    checkedAnsewers.push({ answer, passed: answer === correctAnswer[idx] });
+  });
+  const passed = checkedAnsewers.every(answer => answer.passed);
+
+  console.log(checkedAnsewers);
+  console.log(passed);
+
+  const userRigthAnswersCount = checkedAnsewers.reduce((acc, answer) => {
+    if (answer.passed) {
+      return acc + 1;
+    }
+    return acc;
+  }, 0);
+
+  console.log(userRigthAnswersCount);
+
+  function testMessage(userRigthAnswersCount) {
+    const correctAnswerPercentage = Math.round(
+      (userRigthAnswersCount / correctAnswer.length) * 100,
+    );
+    let message = `${correctAnswerPercentage} % Правильных ответов.`;
+    if (correctAnswerPercentage < 80) {
+      return (message += ' Тест не пройден.');
+    } else {
+      return (message += ' Поздравляем! Тест пройден.');
+    }
+  }
+
+  alert(testMessage(userRigthAnswersCount));
 }
