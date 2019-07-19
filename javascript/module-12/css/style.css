@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+.colorSwitch {
+  text-transform: uppercase;
+  text-align: center;
+  width: 500px;
+  height: 100px;
+  border: 2px solid rgba(14, 13, 13, 0.904);
+  margin: 20px auto;
+  padding: 10px;
+}
+button {
+  width: 100px;
+  height: 40px;
+}
